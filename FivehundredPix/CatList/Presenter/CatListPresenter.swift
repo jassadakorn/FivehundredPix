@@ -16,10 +16,20 @@ class CatListPresenter
 
 extension CatListPresenter: CatListPresenterProtocol{
     func viewDidload() {
+        interactor?.getCategoryList()
+    }
+    
+    func didSelectRowAt(indexPath: IndexPath) {
         
     }
 }
 
 extension CatListPresenter: CatListInteractorOutputProtocol{
+    func didGetPhotoList(photos: [Photo]) {
+        view?.didGetPhotoList(photos: photos)
+    }
     
+    func didGetCategoryList(catList: CategoryList) {
+        view?.didGetCategoryList(catList: catList)
+    }
 }

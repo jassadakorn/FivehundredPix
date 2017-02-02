@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import PromiseKit
 
 protocol CatListViewProtocol: class
 {
@@ -11,11 +12,15 @@ protocol CatListViewProtocol: class
     /**
     * Add here your methods for communication PRESENTER -> VIEW
     */
+    func didGetCategoryList(catList:CategoryList)
+    func didGetPhotoList(photos:[Photo])
+    
 }
 
 protocol CatListWireFrameProtocol: class
 {
     static func presentCatListModule(fromView window: AnyObject)
+    static func presentPhotoListModule(fromView view: AnyObject)
     /**
     * Add here your methods for communication PRESENTER -> WIREFRAME
     */
@@ -31,6 +36,7 @@ protocol CatListPresenterProtocol: class
     */
     
     func viewDidload()
+    func didSelectRowAt(indexPath: IndexPath)
 }
 
 protocol CatListInteractorOutputProtocol: class
@@ -38,7 +44,8 @@ protocol CatListInteractorOutputProtocol: class
     /**
     * Add here your methods for communication INTERACTOR -> PRESENTER
     */
-    
+    func didGetCategoryList(catList:CategoryList)
+    func didGetPhotoList(photos:[Photo])
 
 }
 
@@ -66,6 +73,8 @@ protocol CatListAPIDataManagerInputProtocol: class
     /**
     * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
     */
+    func getRecentPhotos() -> Promise<PhotoList>
+
 }
 
 protocol CatListLocalDataManagerInputProtocol: class
