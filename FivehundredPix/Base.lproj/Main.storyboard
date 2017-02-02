@@ -45,8 +45,15 @@
                                                 <constraint firstAttribute="leadingMargin" secondItem="5XX-CX-OiY" secondAttribute="leading" id="n3k-Ho-qa1"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblCatName" destination="5XX-CX-OiY" id="Opj-Mc-F1W"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jS1-3o-yjl"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="XGc-8c-U1m"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -65,6 +72,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079.2" y="138.98050974512745"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YW8-xX-Lr8">
+            <objects>
+                <viewController id="7Z2-Bw-zeF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lEC-1b-YfO"/>
+                        <viewControllerLayoutGuide type="bottom" id="L3k-rD-XlB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hph-Gz-AUM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DG2-VC-PYN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gyv-Ka-4aN">

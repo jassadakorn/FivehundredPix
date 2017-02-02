@@ -10,7 +10,7 @@ class CatListWireFrame: CatListWireFrameProtocol
 {
     
     static let catListIdentifier = "CatListView"
-    static let 
+    static let photoListIdentifier = ""
     static let storyboardIdentifier = "Main"
     
     class func presentCatListModule(fromView window: AnyObject)

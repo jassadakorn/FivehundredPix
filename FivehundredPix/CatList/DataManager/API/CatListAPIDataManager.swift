@@ -27,7 +27,7 @@ class CatListAPIDataManager: CatListAPIDataManagerInputProtocol
                  "page":"1",
                  "feature":"fresh_today"]
             SVProgressHUD.show()
-            Alamofire.request(Router.CreateUser(parameter as [String : AnyObject]))
+            Alamofire.request(Router.getPhotos(parameter as [String : AnyObject]))
                 .responseJSON(completionHandler: { response in
                     SVProgressHUD.dismiss()
                     if let json = response.result.value{
