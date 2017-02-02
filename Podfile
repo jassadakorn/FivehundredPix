@@ -6,7 +6,11 @@ target 'FivehundredPix' do
   use_frameworks!
 
     pod 'GreedoLayout'
+    pod 'Alamofire'
     pod 'ObjectMapper'
+    pod 'PromiseKit'
+    pod 'SVProgressHUD'
+    
     
   # Pods for FivehundredPix
 
