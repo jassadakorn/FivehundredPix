@@ -1,0 +1,15 @@
+PODS:
+  - GreedoLayout (1.2.0)
+  - ObjectMapper (2.2.2)
+
+DEPENDENCIES:
+  - GreedoLayout
+  - ObjectMapper
+
+SPEC CHECKSUMS:
+  GreedoLayout: b1a1adc6ed5f281353225e3eb21d18cedee8e513
+  ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
+
+PODFILE CHECKSUM: bc2ede1d3672009325afa9a06f3e2675f5397c69
+
+COCOAPODS: 1.1.1
