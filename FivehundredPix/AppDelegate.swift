@@ -19,9 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         CatListWireFrame.presentCatListModule(fromView: self.window!)
         
-        if let path = Bundle.main.path(forResource: "Keys", ofType: "plist") {
-            let keys = NSDictionary(contentsOfFile: path)
-        }
+      
         return true
     }
 
