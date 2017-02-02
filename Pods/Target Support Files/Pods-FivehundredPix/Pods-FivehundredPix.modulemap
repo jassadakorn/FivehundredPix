@@ -1,6 +1,0 @@
-framework module Pods_FivehundredPix {
-  umbrella header "Pods-FivehundredPix-umbrella.h"
-
-  export *
-  module * { export * }
-}
