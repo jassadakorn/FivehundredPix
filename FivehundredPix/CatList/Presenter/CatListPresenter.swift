@@ -19,8 +19,8 @@ extension CatListPresenter: CatListPresenterProtocol{
         interactor?.getCategoryList()
     }
     
-    func didSelectRowAt(indexPath: IndexPath) {
-        
+    func didSelectPhoto(photos: [Photo], catName:String) {
+        wireFrame?.presentPhotoListModule(fromView: view!, photos: photos, catName:catName)
     }
 }
 

@@ -20,7 +20,7 @@ protocol CatListViewProtocol: class
 protocol CatListWireFrameProtocol: class
 {
     static func presentCatListModule(fromView window: AnyObject)
-    static func presentPhotoListModule(fromView view: AnyObject)
+    func presentPhotoListModule(fromView view: AnyObject, photos:[Photo], catName:String)
     /**
     * Add here your methods for communication PRESENTER -> WIREFRAME
     */
@@ -36,7 +36,7 @@ protocol CatListPresenterProtocol: class
     */
     
     func viewDidload()
-    func didSelectRowAt(indexPath: IndexPath)
+    func didSelectPhoto(photos:[Photo], catName:String)
 }
 
 protocol CatListInteractorOutputProtocol: class
