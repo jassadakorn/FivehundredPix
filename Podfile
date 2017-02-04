@@ -5,12 +5,12 @@ target 'FivehundredPix' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-    pod 'GreedoLayout'
+    
     pod 'Alamofire'
     pod 'ObjectMapper'
     pod 'PromiseKit'
     pod 'SVProgressHUD'
-    
+    pod 'Kingfisher'
     
   # Pods for FivehundredPix
 
