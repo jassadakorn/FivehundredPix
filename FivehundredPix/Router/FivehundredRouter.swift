@@ -13,7 +13,7 @@ enum Router: URLRequestConvertible {
     static let baseURLString = "https://api.500px.com/v1"
     static var OAuthToken: String?
     
-    case getPhotos([String: AnyObject])
+    case getPhotos([String: Any])
 
     
     var method: Alamofire.HTTPMethod {
