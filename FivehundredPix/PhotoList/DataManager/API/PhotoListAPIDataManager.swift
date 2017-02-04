@@ -4,8 +4,22 @@
 //
 
 import Foundation
+import PromiseKit
 
 class PhotoListAPIDataManager: PhotoListAPIDataManagerInputProtocol
 {
-    init() {}
+    let api = CatListAPIDataManager()
+
+
+    func getPhotoList(only catName:String ,page: Int) -> Promise<PhotoList>{
+        return Promise { fulfill , reject in
+            api.getRecentPhotos(only: catName, page: page).then { photoLis -> Void in
+                fulfill(photoLis)
+            }.catch { error in
+                reject(error)
+            }
+        }
+    }
+
+
 }

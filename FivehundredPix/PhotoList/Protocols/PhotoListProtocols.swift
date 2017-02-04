@@ -4,6 +4,8 @@
 //
 
 import Foundation
+import UIKit
+import PromiseKit
 
 protocol PhotoListViewProtocol: class
 {
@@ -11,11 +13,15 @@ protocol PhotoListViewProtocol: class
     /**
     * Add here your methods for communication PRESENTER -> VIEW
     */
+
+    func didGetDefaultPhotoList(photoList:[Photo], catName:String)
+    func didGetPhotoList(photoList:[Photo])
+
 }
 
 protocol PhotoListWireFrameProtocol: class
 {
-    class func presentPhotoListModule(fromView view: AnyObject)
+    static func presentPhotoListModule(fromView: AnyObject ,photoList: [Photo] ,catName:String)
     /**
     * Add here your methods for communication PRESENTER -> WIREFRAME
     */
@@ -29,6 +35,9 @@ protocol PhotoListPresenterProtocol: class
     /**
     * Add here your methods for communication VIEW -> PRESENTER
     */
+
+    func viewDidLoad()
+    func getPhotoList(only catName:String ,page:Int)
 }
 
 protocol PhotoListInteractorOutputProtocol: class
@@ -36,6 +45,9 @@ protocol PhotoListInteractorOutputProtocol: class
     /**
     * Add here your methods for communication INTERACTOR -> PRESENTER
     */
+
+    func didGetDefaultPhotoList(photoList:[Photo] ,catName:String)
+    func didGetPhotoList(photoList:[Photo])
 }
 
 protocol PhotoListInteractorInputProtocol: class
@@ -43,9 +55,14 @@ protocol PhotoListInteractorInputProtocol: class
     var presenter: PhotoListInteractorOutputProtocol? { get set }
     var APIDataManager: PhotoListAPIDataManagerInputProtocol? { get set }
     var localDatamanager: PhotoListLocalDataManagerInputProtocol? { get set }
+    var defaultPhoto: [Photo]? { get set }
+    var catName: String? { get set }
     /**
     * Add here your methods for communication PRESENTER -> INTERACTOR
     */
+
+    func getDefaultPhotoList()
+    func getPhotoList(only catName:String ,page:Int)
 }
 
 protocol PhotoListDataManagerInputProtocol: class
@@ -60,6 +77,7 @@ protocol PhotoListAPIDataManagerInputProtocol: class
     /**
     * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
     */
+    func getPhotoList(only catName:String ,page: Int) -> Promise<PhotoList>
 }
 
 protocol PhotoListLocalDataManagerInputProtocol: class

@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import UIKit
 
 class PhotoListPresenter: PhotoListPresenterProtocol, PhotoListInteractorOutputProtocol
 {
@@ -11,5 +12,24 @@ class PhotoListPresenter: PhotoListPresenterProtocol, PhotoListInteractorOutputP
     var interactor: PhotoListInteractorInputProtocol?
     var wireFrame: PhotoListWireFrameProtocol?
     
-    init() {}
+    func viewDidLoad() {
+        interactor?.getDefaultPhotoList()
+    }
+
+    func getPhotoList(only catName: String, page: Int) {
+        interactor?.getPhotoList(only: catName, page: page)
+    }
+
+
+    func didGetDefaultPhotoList(photoList: [Photo], catName:String) {
+        view?.didGetDefaultPhotoList(photoList: photoList, catName:catName)
+    }
+
+    func didGetPhotoList(photoList: [Photo]) {
+        view?.didGetPhotoList(photoList: photoList)
+    }
+
+    
+
+    
 }
