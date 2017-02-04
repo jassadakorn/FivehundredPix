@@ -16,18 +16,20 @@ enum APIError:Error{
 class CatListAPIDataManager: CatListAPIDataManagerInputProtocol
 {
     
-    func getRecentPhotos() -> Promise<PhotoList> {
+    func getRecentPhotos(only catName:String, page:Int) -> Promise<PhotoList> {
         return Promise{ fulfill , reject in
             let parameter:[String:Any] =
                 ["sort":"created_at",
                  "image_size":"3",
                  "include_store":"store_download",
                  "include_states":"voted",
-                 "consumer_key":"TYTmRjKWO0LXRS2ZJNvmTezvHVVewZg8mzE7ttfs",
+                 "consumer_key":Config.comsumerKey(),
                  "page":"1",
+                 "rpp":"100",
+                 "only":catName,
                  "feature":"fresh_today"]
             SVProgressHUD.show()
-            Alamofire.request(Router.getPhotos(parameter as [String : AnyObject]))
+            Alamofire.request(Router.getPhotos(parameter))
                 .responseJSON(completionHandler: { response in
                     SVProgressHUD.dismiss()
                     if let json = response.result.value{
@@ -41,5 +43,9 @@ class CatListAPIDataManager: CatListAPIDataManagerInputProtocol
                     }
                 })
         }
+    }
+
+    func getRecentPhotos() -> Promise<PhotoList> {
+        return self.getRecentPhotos(only: "", page: 1)
     }
 }
