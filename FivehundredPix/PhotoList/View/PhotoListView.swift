@@ -14,31 +14,46 @@ class PhotoListView: UIViewController
     var photoList = [Photo]()
     var catName = ""
     var currentPage = 1
+    var isEnd = false
     
 
 
 
     override func viewDidLoad() {
         presenter?.viewDidLoad()
-        
+
+
     }
 
 }
 
 extension PhotoListView: PhotoListViewProtocol{
     func didGetDefaultPhotoList(photoList: [Photo], catName:String) {
+        self.title = catName
         DispatchQueue.main.async {
             self.photoList = photoList
             self.catName = catName
             self.collectionPhotoList.reloadData()
+            if(self.collectionPhotoList.contentSize.height < self.view.frame.height){
+                self.presenter?.getPhotoList(only: self.catName, page: self.currentPage)
+            }
         }
     }
 
     func didGetPhotoList(photoList: [Photo]) {
-        currentPage += 1
+
         DispatchQueue.main.async {
-            self.photoList.append(contentsOf: photoList)
-            self.collectionPhotoList.reloadData() 
+            if(photoList.count == 0){
+                self.isEnd = true
+            }
+            self.currentPage += 1
+            if(self.collectionPhotoList.contentSize.height < self.view.frame.height){
+                self.photoList = photoList
+            }else{
+                self.photoList.append(contentsOf: photoList)
+            }
+
+            self.collectionPhotoList.reloadData()
         }
     }
 }
@@ -68,7 +83,9 @@ extension PhotoListView: UICollectionViewDataSource{
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let view = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footer", for: indexPath)
-        // configure footer view
+        if(isEnd){
+            view.isHidden = true
+        }
         return view
     }
 
