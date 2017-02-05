@@ -24,7 +24,7 @@ class CatListAPIDataManager: CatListAPIDataManagerInputProtocol
                  "include_store":"store_download",
                  "include_states":"voted",
                  "consumer_key":Config.comsumerKey(),
-                 "page":"1",
+                 "page":page,
                  "rpp":"100",
                  "only":catName,
                  "feature":"fresh_today"]
