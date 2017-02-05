@@ -7,7 +7,7 @@ import Foundation
 import Alamofire
 import ObjectMapper
 import PromiseKit
-import SVProgressHUD
+
 
 enum APIError:Error{
     case error(message:String)
@@ -28,10 +28,9 @@ class CatListAPIDataManager: CatListAPIDataManagerInputProtocol
                  "rpp":"100",
                  "only":catName,
                  "feature":"fresh_today"]
-            SVProgressHUD.show()
+
             Alamofire.request(Router.getPhotos(parameter))
                 .responseJSON(completionHandler: { response in
-                    SVProgressHUD.dismiss()
                     if let json = response.result.value{
                         if let photoList = Mapper<PhotoList>().map(JSONObject: json){
                             fulfill(photoList)
