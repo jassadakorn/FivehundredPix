@@ -6,6 +6,7 @@
 import Foundation
 import UIKit
 import Kingfisher
+import SVProgressHUD
 
 class CatListView: UIViewController
 {
@@ -16,7 +17,10 @@ class CatListView: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         presenter?.viewDidload()
+        SVProgressHUD.show()
+        self.tbvCatList.isHidden = true
     }
 }
 
@@ -25,6 +29,8 @@ extension CatListView: CatListViewProtocol{
     func didGetCategoryList(catList: CategoryList) {
         DispatchQueue.main.async {
             self.catList = catList.list
+            SVProgressHUD.dismiss()
+            self.tbvCatList.isHidden = false
             self.tbvCatList.reloadData()
         }
     }
