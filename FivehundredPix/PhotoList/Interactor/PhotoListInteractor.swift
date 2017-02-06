@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import UIKit
 
 class PhotoListInteractor: PhotoListInteractorInputProtocol
 {
@@ -20,7 +21,19 @@ class PhotoListInteractor: PhotoListInteractorInputProtocol
 
     func getPhotoList(only catName: String, page: Int) {
         APIDataManager?.getPhotoList(only: catName, page: page).then { photoList -> Void in
-            self.presenter!.didGetPhotoList(photoList: photoList.photos!)
+            if let presenter = self.presenter{
+                presenter.didGetPhotoList(photoList: photoList.photos!)
+            }
+        }.catch { error in
+
+        }
+    }
+
+    func beginRefresh(only catName: String, refresh: UIRefreshControl) {
+        APIDataManager?.getPhotoList(only: catName, page: 1).then { photoList -> Void in
+            if let presenter = self.presenter{
+                presenter.didFinishedRefresh(with: photoList.photos!, refresh: refresh)
+            }
         }.catch { error in
 
         }

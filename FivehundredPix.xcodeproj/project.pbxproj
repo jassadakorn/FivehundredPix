@@ -21,6 +21,13 @@
 		210AE0911E41DF75004E129B /* CatListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210AE0871E41DF75004E129B /* CatListProtocols.swift */; };
 		210AE0921E41DF75004E129B /* CatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210AE0891E41DF75004E129B /* CatListView.swift */; };
 		210AE0931E41DF75004E129B /* CatListWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210AE08B1E41DF75004E129B /* CatListWireFrame.swift */; };
+		2146997D1E48330C0082BD1C /* ImagePopupAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2146996F1E48330C0082BD1C /* ImagePopupAPIDataManager.swift */; };
+		2146997E1E48330C0082BD1C /* ImagePopupLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214699711E48330C0082BD1C /* ImagePopupLocalDataManager.swift */; };
+		2146997F1E48330C0082BD1C /* ImagePopupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214699731E48330C0082BD1C /* ImagePopupInteractor.swift */; };
+		214699811E48330C0082BD1C /* ImagePopupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214699761E48330C0082BD1C /* ImagePopupPresenter.swift */; };
+		214699821E48330C0082BD1C /* ImagePopupProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214699781E48330C0082BD1C /* ImagePopupProtocols.swift */; };
+		214699831E48330C0082BD1C /* ImagePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2146997A1E48330C0082BD1C /* ImagePopupView.swift */; };
+		214699841E48330C0082BD1C /* ImagePopupWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2146997C1E48330C0082BD1C /* ImagePopupWireFrame.swift */; };
 		21A606191E42FA6D000C1C39 /* FivehundredRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A606181E42FA6D000C1C39 /* FivehundredRouter.swift */; };
 		21A606241E431A79000C1C39 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A6061D1E431A79000C1C39 /* Avatar.swift */; };
 		21A606251E431A79000C1C39 /* Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A6061E1E431A79000C1C39 /* Default.swift */; };
@@ -33,7 +40,6 @@
 		21B72AA81E4390820039FD80 /* PhotoListAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B72A9A1E4390820039FD80 /* PhotoListAPIDataManager.swift */; };
 		21B72AA91E4390820039FD80 /* PhotoListLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B72A9C1E4390820039FD80 /* PhotoListLocalDataManager.swift */; };
 		21B72AAA1E4390820039FD80 /* PhotoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B72A9E1E4390820039FD80 /* PhotoListInteractor.swift */; };
-		21B72AAB1E4390820039FD80 /* PhotoListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B72A9F1E4390820039FD80 /* PhotoListItem.swift */; };
 		21B72AAC1E4390820039FD80 /* PhotoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B72AA11E4390820039FD80 /* PhotoListPresenter.swift */; };
 		21B72AAD1E4390820039FD80 /* PhotoListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B72AA31E4390820039FD80 /* PhotoListProtocols.swift */; };
 		21B72AAE1E4390820039FD80 /* PhotoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B72AA51E4390820039FD80 /* PhotoListView.swift */; };
@@ -88,6 +94,13 @@
 		210AE0871E41DF75004E129B /* CatListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatListProtocols.swift; sourceTree = "<group>"; };
 		210AE0891E41DF75004E129B /* CatListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatListView.swift; sourceTree = "<group>"; };
 		210AE08B1E41DF75004E129B /* CatListWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatListWireFrame.swift; sourceTree = "<group>"; };
+		2146996F1E48330C0082BD1C /* ImagePopupAPIDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePopupAPIDataManager.swift; sourceTree = "<group>"; };
+		214699711E48330C0082BD1C /* ImagePopupLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePopupLocalDataManager.swift; sourceTree = "<group>"; };
+		214699731E48330C0082BD1C /* ImagePopupInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePopupInteractor.swift; sourceTree = "<group>"; };
+		214699761E48330C0082BD1C /* ImagePopupPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePopupPresenter.swift; sourceTree = "<group>"; };
+		214699781E48330C0082BD1C /* ImagePopupProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePopupProtocols.swift; sourceTree = "<group>"; };
+		2146997A1E48330C0082BD1C /* ImagePopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePopupView.swift; sourceTree = "<group>"; };
+		2146997C1E48330C0082BD1C /* ImagePopupWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePopupWireFrame.swift; sourceTree = "<group>"; };
 		21A606181E42FA6D000C1C39 /* FivehundredRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FivehundredRouter.swift; path = Router/FivehundredRouter.swift; sourceTree = "<group>"; };
 		21A6061D1E431A79000C1C39 /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		21A6061E1E431A79000C1C39 /* Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Default.swift; sourceTree = "<group>"; };
@@ -100,7 +113,6 @@
 		21B72A9A1E4390820039FD80 /* PhotoListAPIDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListAPIDataManager.swift; sourceTree = "<group>"; };
 		21B72A9C1E4390820039FD80 /* PhotoListLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListLocalDataManager.swift; sourceTree = "<group>"; };
 		21B72A9E1E4390820039FD80 /* PhotoListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListInteractor.swift; sourceTree = "<group>"; };
-		21B72A9F1E4390820039FD80 /* PhotoListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListItem.swift; sourceTree = "<group>"; };
 		21B72AA11E4390820039FD80 /* PhotoListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListPresenter.swift; sourceTree = "<group>"; };
 		21B72AA31E4390820039FD80 /* PhotoListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListProtocols.swift; sourceTree = "<group>"; };
 		21B72AA51E4390820039FD80 /* PhotoListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListView.swift; sourceTree = "<group>"; };
@@ -174,6 +186,7 @@
 			children = (
 				21A606171E42FA48000C1C39 /* Router */,
 				21F11F0A1E41F65800E56586 /* Entity */,
+				2146996C1E48330C0082BD1C /* ImagePopupModule */,
 				21B72A971E4390820039FD80 /* PhotoListModule */,
 				210AE07B1E41DF75004E129B /* CatListModule */,
 				210AE04D1E41D449004E129B /* AppDelegate.swift */,
@@ -287,6 +300,85 @@
 			path = WireFrame;
 			sourceTree = "<group>";
 		};
+		2146996C1E48330C0082BD1C /* ImagePopupModule */ = {
+			isa = PBXGroup;
+			children = (
+				2146996D1E48330C0082BD1C /* DataManager */,
+				214699721E48330C0082BD1C /* Interactor */,
+				214699751E48330C0082BD1C /* Presenter */,
+				214699771E48330C0082BD1C /* Protocols */,
+				214699791E48330C0082BD1C /* View */,
+				2146997B1E48330C0082BD1C /* WireFrame */,
+			);
+			name = ImagePopupModule;
+			path = PhotoList/ImagePopup;
+			sourceTree = "<group>";
+		};
+		2146996D1E48330C0082BD1C /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				2146996E1E48330C0082BD1C /* API */,
+				214699701E48330C0082BD1C /* Local */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		2146996E1E48330C0082BD1C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2146996F1E48330C0082BD1C /* ImagePopupAPIDataManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		214699701E48330C0082BD1C /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				214699711E48330C0082BD1C /* ImagePopupLocalDataManager.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		214699721E48330C0082BD1C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				214699731E48330C0082BD1C /* ImagePopupInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		214699751E48330C0082BD1C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				214699761E48330C0082BD1C /* ImagePopupPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		214699771E48330C0082BD1C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				214699781E48330C0082BD1C /* ImagePopupProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		214699791E48330C0082BD1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2146997A1E48330C0082BD1C /* ImagePopupView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2146997B1E48330C0082BD1C /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				2146997C1E48330C0082BD1C /* ImagePopupWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
 		21A606171E42FA48000C1C39 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,7 +444,6 @@
 			isa = PBXGroup;
 			children = (
 				21B72A9E1E4390820039FD80 /* PhotoListInteractor.swift */,
-				21B72A9F1E4390820039FD80 /* PhotoListItem.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -708,12 +799,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21B72AAB1E4390820039FD80 /* PhotoListItem.swift in Sources */,
 				21B72AAF1E4390820039FD80 /* PhotoListWireFrame.swift in Sources */,
 				21F11F0E1E41F6BF00E56586 /* CategoryList.swift in Sources */,
 				21B72AA81E4390820039FD80 /* PhotoListAPIDataManager.swift in Sources */,
 				21A606261E431A79000C1C39 /* Filter.swift in Sources */,
 				210AE04E1E41D449004E129B /* AppDelegate.swift in Sources */,
+				214699841E48330C0082BD1C /* ImagePopupWireFrame.swift in Sources */,
 				210AE0911E41DF75004E129B /* CatListProtocols.swift in Sources */,
 				21F11F091E41F1F700E56586 /* CatListTableViewCell.swift in Sources */,
 				210AE0901E41DF75004E129B /* CatListPresenter.swift in Sources */,
@@ -722,19 +813,25 @@
 				210AE08E1E41DF75004E129B /* CatListInteractor.swift in Sources */,
 				21A606291E431A79000C1C39 /* PhotoList.swift in Sources */,
 				21A606191E42FA6D000C1C39 /* FivehundredRouter.swift in Sources */,
+				214699831E48330C0082BD1C /* ImagePopupView.swift in Sources */,
 				21B72AAE1E4390820039FD80 /* PhotoListView.swift in Sources */,
+				2146997D1E48330C0082BD1C /* ImagePopupAPIDataManager.swift in Sources */,
 				21B72AA91E4390820039FD80 /* PhotoListLocalDataManager.swift in Sources */,
 				21A606271E431A79000C1C39 /* Image.swift in Sources */,
 				21A606281E431A79000C1C39 /* Photo.swift in Sources */,
+				214699821E48330C0082BD1C /* ImagePopupProtocols.swift in Sources */,
 				21A606241E431A79000C1C39 /* Avatar.swift in Sources */,
 				21A606251E431A79000C1C39 /* Default.swift in Sources */,
 				21B72AAD1E4390820039FD80 /* PhotoListProtocols.swift in Sources */,
+				214699811E48330C0082BD1C /* ImagePopupPresenter.swift in Sources */,
 				210AE08F1E41DF75004E129B /* CatListItem.swift in Sources */,
 				21B72AB31E45C8060039FD80 /* Config.swift in Sources */,
 				210AE0931E41DF75004E129B /* CatListWireFrame.swift in Sources */,
 				210AE08C1E41DF75004E129B /* CatListAPIDataManager.swift in Sources */,
 				21B72AAA1E4390820039FD80 /* PhotoListInteractor.swift in Sources */,
+				2146997E1E48330C0082BD1C /* ImagePopupLocalDataManager.swift in Sources */,
 				210AE08D1E41DF75004E129B /* CatListLocalDataManager.swift in Sources */,
+				2146997F1E48330C0082BD1C /* ImagePopupInteractor.swift in Sources */,
 				21A6062A1E431A79000C1C39 /* User.swift in Sources */,
 				21B72AB11E44F4180039FD80 /* PhotoListCollectionViewCell.swift in Sources */,
 			);

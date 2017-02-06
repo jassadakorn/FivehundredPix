@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.3.0)
   - Kingfisher (3.3.3)
   - ObjectMapper (2.2.2)
+  - PopupController (0.2.0)
   - PromiseKit (4.1.7):
     - PromiseKit/Foundation (= 4.1.7)
     - PromiseKit/QuartzCore (= 4.1.7)
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - Alamofire
   - Kingfisher
   - ObjectMapper
+  - PopupController
   - PromiseKit
   - SVProgressHUD
 
@@ -26,9 +28,10 @@ SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   Kingfisher: 893215a42e5c2164e916f69463c68003092b104c
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
+  PopupController: 0b69fdf11cbeaa807789a8c3992599083640988f
   PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 5e28fdebc2c10f991e040d7762bd330839119966
+PODFILE CHECKSUM: 72a1f7daeafaf93cad2eb567c39701d14094a687
 
 COCOAPODS: 1.2.0

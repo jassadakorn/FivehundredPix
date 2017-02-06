@@ -6,6 +6,7 @@
 import Foundation
 import UIKit
 
+
 class PhotoListWireFrame: PhotoListWireFrameProtocol
 {
 
@@ -38,6 +39,10 @@ class PhotoListWireFrame: PhotoListWireFrameProtocol
             fromView.navigationController?.pushViewController(view, animated: true)
         }
 
+    }
+
+    func presentImagePopModule(fromView: AnyObject, photoList: [Photo], selectedIndex: Int) {
+        ImagePopupWireFrame.presentImagePopupModule(fromView: fromView, photoList: photoList, selectedIndex: selectedIndex)
     }
 
 

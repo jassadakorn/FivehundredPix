@@ -11,7 +11,9 @@ target 'FivehundredPix' do
     pod 'PromiseKit'
     pod 'SVProgressHUD'
     pod 'Kingfisher'
-    
+    pod 'PopupController'
+
+
   # Pods for FivehundredPix
 
   target 'FivehundredPixTests' do

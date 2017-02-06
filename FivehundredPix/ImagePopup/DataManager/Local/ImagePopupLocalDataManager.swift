@@ -5,9 +5,7 @@
 
 import Foundation
 
-struct PhotoListItem
+class ImagePopupLocalDataManager: ImagePopupLocalDataManagerInputProtocol
 {
-    /**
-    *  Attributes here
-    */
+    init() {}
 }

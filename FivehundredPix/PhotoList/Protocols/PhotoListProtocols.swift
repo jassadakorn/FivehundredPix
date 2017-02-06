@@ -16,12 +16,15 @@ protocol PhotoListViewProtocol: class
 
     func didGetDefaultPhotoList(photoList:[Photo], catName:String)
     func didGetPhotoList(photoList:[Photo])
+    func didFinishedRefresh(with photoList:[Photo] ,refresh:UIRefreshControl)
+    
 
 }
 
 protocol PhotoListWireFrameProtocol: class
 {
     static func presentPhotoListModule(fromView: AnyObject ,photoList: [Photo] ,catName:String)
+    func presentImagePopModule(fromView: AnyObject, photoList: [Photo], selectedIndex: Int)
     /**
     * Add here your methods for communication PRESENTER -> WIREFRAME
     */
@@ -38,6 +41,10 @@ protocol PhotoListPresenterProtocol: class
 
     func viewDidLoad()
     func getPhotoList(only catName:String ,page:Int)
+    func beginRefresh(only catName:String ,refresh:UIRefreshControl)
+    func didSelectedPhoto(atIndex selectedIndex:Int, photoList: [Photo])
+
+    
 }
 
 protocol PhotoListInteractorOutputProtocol: class
@@ -48,6 +55,7 @@ protocol PhotoListInteractorOutputProtocol: class
 
     func didGetDefaultPhotoList(photoList:[Photo] ,catName:String)
     func didGetPhotoList(photoList:[Photo])
+    func didFinishedRefresh(with photoList:[Photo] ,refresh:UIRefreshControl)
 }
 
 protocol PhotoListInteractorInputProtocol: class
@@ -63,6 +71,7 @@ protocol PhotoListInteractorInputProtocol: class
 
     func getDefaultPhotoList()
     func getPhotoList(only catName:String ,page:Int)
+    func beginRefresh(only catName:String ,refresh:UIRefreshControl)
 }
 
 protocol PhotoListDataManagerInputProtocol: class
