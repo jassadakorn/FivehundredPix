@@ -71,7 +71,9 @@ extension ImagePopupView: UIScrollViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let photo = self.photoList[scrollView.currentPage]
         if let photoName = photo.name{
-            self.lblTitle.text = "Untitle"
+            self.lblTitle.text = "\(photo.name!)"
+        }else{
+            self.lblTitle.text = "Untitled"
         }
 
         presenter?.setImageDetail(photo: photo)
